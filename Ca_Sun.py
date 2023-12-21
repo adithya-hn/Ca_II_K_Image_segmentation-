@@ -235,10 +235,8 @@ for x in range(1,2,1):
   S3=d+s3      
   print('threshold intensity :',S3) 	#midean+3sigma
   thresh =S3
-  im = closing(sun > thresh, square(3)) 
-  
-  #scipy.misc.imsave('thresh.jpg',im)
-
+  im = closing(sun > thresh, square(3))   
+#scipy.misc.imsave('thresh.jpg',im)
 #first labeling
   S = generate_binary_structure(2,2)
   lba, num_features = label(im,structure=S)
